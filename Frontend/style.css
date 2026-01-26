@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@theme {
+    --font-poppins: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --color-primary: #00B207;
+    --color-primary-bright: #84D187;
+    --color-primary-dark: #2C742F;
+}
+
+* {
+    font-family: var(--font-poppins);
+}
