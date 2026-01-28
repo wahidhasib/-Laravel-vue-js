@@ -32,6 +32,17 @@ const onSwiperInit = (swiper) => {
     swiper.pagination.render()
     swiper.pagination.update()
 }
+
+const catPrevEl = ref(null)
+const catNextEl = ref(null)
+
+const onCategorySwiperInit = (swiper) => {
+  swiper.params.navigation.prevEl = catPrevEl.value
+  swiper.params.navigation.nextEl = catNextEl.value
+
+  swiper.navigation.init()
+  swiper.navigation.update()
+}
 </script>
 
 <template>
@@ -45,15 +56,31 @@ const onSwiperInit = (swiper) => {
     </div>
 
     <!-- Categories section -->
-    <section class="max-w-7xl mx-auto px-4 my-5">
-        <h2 class="font-semibold text-2xl md:text-3xl mb-5">Popular Categories</h2>
+    <section class="max-w-7xl mx-auto px-4 mt-10">
+        <div class="flex gap-3 items-center justify-between">
+            <h2 class="font-semibold text-2xl md:text-3xl mb-5">Popular Categories</h2>
+            <div class="flex gap-2">
+                    <button ref="catPrevEl"
+                        class="px-4 py-2 border rounded-full shadow-2xl border-gray-300 hover:bg-primary-dark bg-white font-medium text-gray-800 hover:text-white cursor-pointer duration-300">
+                        Prev
+                    </button>
+                    <button ref="catNextEl"
+                        class="px-4 py-2 border rounded-full shadow-2xl border-gray-300 hover:bg-primary-dark bg-white font-medium text-gray-800 hover:text-white cursor-pointer duration-300">
+                        Next
+                    </button>
+                </div>
+        </div>
         <!-- <div class="grid gap-3 grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 mt-3">
         </div> -->
-        <swiper :slidesPerView="1" :spaceBetween="10" :breakpoints="{
+        <swiper :modules="[Pagination, Autoplay, Navigation]" :slidesPerView="1" :spaceBetween="10" :breakpoints="{
             320: { slidesPerView: 3 },
             768: { slidesPerView: 6 },
             1024: { slidesPerView: 8 }
-        }" class="mySwiper">
+        }"
+        :autoplay="{delay: 2000}"
+        :navigation="{ prevEl: null, nextEl: null }"
+        @swiper="onCategorySwiperInit"
+        class="mySwiper">
             <SwiperSlide v-for="i in 20" :key="i">
                 <CategoryComponent></CategoryComponent>
             </SwiperSlide>
@@ -135,16 +162,3 @@ const onSwiperInit = (swiper) => {
         </div>
     </section>
 </template>
-
-<style>
-/* Inactive bullets (optional) */
-.swiper-pagination-bullet {
-    background-color: gray;
-    /* or whatever color you want for inactive bullets */
-}
-
-/* Active bullet */
-.swiper-pagination-bullet-active {
-    background-color: #00B207 !important;
-}
-</style>

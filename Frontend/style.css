@@ -9,3 +9,21 @@
 * {
     font-family: var(--font-poppins);
 }
+
+
+/* Swiper js pagination styling */
+
+
+/* Inactive bullets (optional) */
+
+.swiper-pagination-bullet {
+    background-color: gray;
+    /* or whatever color you want for inactive bullets */
+}
+
+
+/* Active bullet */
+
+.swiper-pagination-bullet-active {
+    background-color: #00B207 !important;
+}
