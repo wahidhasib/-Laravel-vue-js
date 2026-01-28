@@ -8,6 +8,8 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 
 // Swiper styles (VERY important)
 import CategoryComponent from '@/Components/CategoryComponent.vue';
+import FeatureComponent from '@/Components/FeatureComponent.vue';
+import NewsletterComponent from '@/Components/NewsletterComponent.vue';
 import TestimonialCard from '@/Components/TestimonialCard.vue';
 import WideProductComponent from '@/Components/WideProductComponent.vue';
 import 'swiper/css';
@@ -55,6 +57,10 @@ const onCategorySwiperInit = (swiper) => {
         </div>
     </div>
 
+    <section class="grid grid-cols-2 md:grid-cols-4 max-w-7xl mx-auto px-4 my-5 border-t-2 border-gray-200">
+        <FeatureComponent v-for="i in 4" :key="i"></FeatureComponent>
+    </section>
+
     <!-- Categories section -->
     <section class="max-w-7xl mx-auto px-4 mt-10">
         <div class="flex gap-3 items-center justify-between">
@@ -77,6 +83,7 @@ const onCategorySwiperInit = (swiper) => {
             768: { slidesPerView: 6 },
             1024: { slidesPerView: 8 }
         }"
+        :loop
         :autoplay="{delay: 2000}"
         :navigation="{ prevEl: null, nextEl: null }"
         @swiper="onCategorySwiperInit"
@@ -160,5 +167,9 @@ const onCategorySwiperInit = (swiper) => {
             <h3 class="text-lg font-semibold mb-3 ms-2">Latest</h3>
             <WideProductComponent v-for="i in 3" :key="i"></WideProductComponent>
         </div>
+    </section>
+
+    <section class="bg-[#1A1A1A] my-5">
+        <NewsletterComponent></NewsletterComponent>
     </section>
 </template>
