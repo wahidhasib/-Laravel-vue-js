@@ -7,6 +7,8 @@ import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 
 // Swiper styles (VERY important)
+import AdvertisementComponent from '@/Components/AdvertisementComponent.vue';
+import BlogComponent from '@/Components/BlogComponent.vue';
 import CategoryComponent from '@/Components/CategoryComponent.vue';
 import FeatureComponent from '@/Components/FeatureComponent.vue';
 import NewsletterComponent from '@/Components/NewsletterComponent.vue';
@@ -57,7 +59,7 @@ const onCategorySwiperInit = (swiper) => {
         </div>
     </div>
 
-    <section class="grid grid-cols-2 md:grid-cols-4 max-w-7xl mx-auto px-4 my-5 border-t-2 border-gray-200">
+    <section class="grid grid-cols-2 md:grid-cols-4 max-w-7xl mx-auto px-4 my-5">
         <FeatureComponent v-for="i in 4" :key="i"></FeatureComponent>
     </section>
 
@@ -83,7 +85,6 @@ const onCategorySwiperInit = (swiper) => {
             768: { slidesPerView: 6 },
             1024: { slidesPerView: 8 }
         }"
-        :loop
         :autoplay="{delay: 2000}"
         :navigation="{ prevEl: null, nextEl: null }"
         @swiper="onCategorySwiperInit"
@@ -109,6 +110,12 @@ const onCategorySwiperInit = (swiper) => {
             <PopularProductComponent></PopularProductComponent>
             <PopularProductComponent></PopularProductComponent>
             <PopularProductComponent></PopularProductComponent>
+        </div>
+    </section>
+
+    <section class="bg-white py-5 md:py-10">
+        <div class="px-4 md:flex gap-3 items-center max-w-7xl mx-auto">
+            <AdvertisementComponent v-for="i in 3" :key="i"></AdvertisementComponent>
         </div>
     </section>
 
@@ -169,7 +176,16 @@ const onCategorySwiperInit = (swiper) => {
         </div>
     </section>
 
-    <section class="bg-[#1A1A1A] my-5">
+    <section class="bg-gray-100 mt-5 py-5 md:py-10">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-semibold">Latest Blogs</h2>
+            <div class="grid grid-cols-2 gap-3 lg:grid-cols-4 mt-5">
+                <BlogComponent v-for="i in 4" :key="i"></BlogComponent>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#F7F7F7]">
         <NewsletterComponent></NewsletterComponent>
     </section>
 </template>

@@ -82,24 +82,49 @@
             <hr class="text-gray-600 my-5">
             <div class="flex flex-wrap items-center justify-between">
                 <p class="text-gray-500">
-                    <a href="" class="text-gray-400 font-semibold duration-300 hover:text-primary-bright">Wahid Hasib</a>
+                    <a href="" class="text-gray-400 font-semibold duration-300 hover:text-primary-bright">Wahid
+                        Hasib</a>
                     &copy; 2026. All Rights Reserved.
                 </p>
                 <ul class="flex gap-2 text-gray-500">
                     <li>
-                        <a href="">icon</a>
+                        <a href="#" aria-label="Facebook" class="group h-8 w-8 flex items-center justify-center rounded-full
+            bg-gray-200 text-gray-600
+            transition-all duration-300
+            hover:bg-primary hover:text-white hover:scale-110
+            focus:outline-none focus:ring-2 focus:ring-primary/40">
+                            <i class="fa-brands fa-facebook-f text-lg"></i>
+                        </a>
                     </li>
+
                     <li>
-                        <a href="">icon</a>
+                        <a href="#" aria-label="Twitter" class="group h-8 w-8 flex items-center justify-center rounded-full
+            bg-gray-200 text-gray-600
+            transition-all duration-300
+            hover:bg-primary hover:text-white hover:scale-110
+            focus:outline-none focus:ring-2 focus:ring-primary/40">
+                            <i class="fa-brands fa-x-twitter text-lg"></i>
+                        </a>
                     </li>
+
                     <li>
-                        <a href="">icon</a>
+                        <a href="#" aria-label="Instagram" class="group h-8 w-8 flex items-center justify-center rounded-full
+            bg-gray-200 text-gray-600
+            transition-all duration-300
+            hover:bg-primary hover:text-white hover:scale-110
+            focus:outline-none focus:ring-2 focus:ring-primary/40">
+                            <i class="fa-brands fa-instagram text-lg"></i>
+                        </a>
                     </li>
+
                     <li>
-                        <a href="">icon</a>
-                    </li>
-                    <li>
-                        <a href="">icon</a>
+                        <a href="#" aria-label="LinkedIn" class="group h-8 w-8 flex items-center justify-center rounded-full
+            bg-gray-200 text-gray-600
+            transition-all duration-300
+            hover:bg-primary hover:text-white hover:scale-110
+            focus:outline-none focus:ring-2 focus:ring-primary/40">
+                            <i class="fa-brands fa-linkedin-in text-lg"></i>
+                        </a>
                     </li>
                 </ul>
             </div>
