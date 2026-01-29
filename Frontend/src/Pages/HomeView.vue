@@ -7,11 +7,11 @@ import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 
 // Swiper styles (VERY important)
-import AdvertisementComponent from '@/Components/AdvertisementComponent.vue';
 import BlogComponent from '@/Components/BlogComponent.vue';
 import CategoryComponent from '@/Components/CategoryComponent.vue';
 import FeatureComponent from '@/Components/FeatureComponent.vue';
 import NewsletterComponent from '@/Components/NewsletterComponent.vue';
+import PromotionalComponent from '@/Components/PromotionalComponent.vue';
 import TestimonialCard from '@/Components/TestimonialCard.vue';
 import WideProductComponent from '@/Components/WideProductComponent.vue';
 import 'swiper/css';
@@ -51,7 +51,7 @@ const onCategorySwiperInit = (swiper) => {
 
 <template>
     <div class="flex gap-5 items-start justify-between max-w-7xl mx-auto px-4">
-        <div class=" hidden lg:block w-1/4 border border-gray-300">
+        <div class=" rounded-md overflow-hidden hidden lg:block w-1/4 border border-gray-300">
             <TopCategory></TopCategory>
         </div>
         <div class="w-full lg:w-3/4">
@@ -69,12 +69,12 @@ const onCategorySwiperInit = (swiper) => {
             <h2 class="font-semibold text-2xl md:text-3xl mb-5">Popular Categories</h2>
             <div class="flex gap-2">
                     <button ref="catPrevEl"
-                        class="px-4 py-2 border rounded-full shadow-2xl border-gray-300 hover:bg-primary-dark bg-white font-medium text-gray-800 hover:text-white cursor-pointer duration-300">
-                        Prev
+                        class="h-10 w-10 flex items-center justify-center border rounded-full shadow-2xl border-gray-300 hover:bg-primary-dark bg-white font-medium text-gray-800 hover:text-white cursor-pointer duration-300">
+                        <i class="fa-solid fa-angle-left"></i>
                     </button>
                     <button ref="catNextEl"
-                        class="px-4 py-2 border rounded-full shadow-2xl border-gray-300 hover:bg-primary-dark bg-white font-medium text-gray-800 hover:text-white cursor-pointer duration-300">
-                        Next
+                        class="h-10 w-10 flex items-center justify-center border rounded-full shadow-2xl border-gray-300 hover:bg-primary-dark bg-white font-medium text-gray-800 hover:text-white cursor-pointer duration-300">
+                        <i class="fa-solid fa-angle-right"></i>
                     </button>
                 </div>
         </div>
@@ -113,11 +113,11 @@ const onCategorySwiperInit = (swiper) => {
         </div>
     </section>
 
-    <section class="bg-white py-5 md:py-10">
-        <div class="px-4 md:flex gap-3 items-center max-w-7xl mx-auto">
-            <AdvertisementComponent v-for="i in 3" :key="i"></AdvertisementComponent>
+     <section class="bg-[#f3f8f3]">
+        <div class="max-w-7xl mx-auto px-4 pt-20">
+            <PromotionalComponent></PromotionalComponent>
         </div>
-    </section>
+     </section>
 
     <!-- Testimonial section -->
     <section class="py-5 md:py-15">
@@ -130,12 +130,12 @@ const onCategorySwiperInit = (swiper) => {
 
                 <div class="flex gap-2">
                     <button ref="prevEl"
-                        class="px-4 py-2 border rounded-full shadow-2xl border-gray-300 hover:bg-primary-dark bg-white font-medium text-gray-800 hover:text-white cursor-pointer duration-300">
-                        Prev
+                        class="h-10 w-10 flex items-center justify-center border rounded-full shadow-2xl border-gray-300 hover:bg-primary-dark bg-white font-medium text-gray-800 hover:text-white cursor-pointer duration-300">
+                        <i class="fa-solid fa-angle-left"></i>
                     </button>
                     <button ref="nextEl"
-                        class="px-4 py-2 border rounded-full shadow-2xl border-gray-300 hover:bg-primary-dark bg-white font-medium text-gray-800 hover:text-white cursor-pointer duration-300">
-                        Next
+                        class="h-10 w-10 flex items-center justify-center border rounded-full shadow-2xl border-gray-300 hover:bg-primary-dark bg-white font-medium text-gray-800 hover:text-white cursor-pointer duration-300">
+                        <i class="fa-solid fa-angle-right"></i>
                     </button>
                 </div>
             </div>

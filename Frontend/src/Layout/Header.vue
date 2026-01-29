@@ -50,25 +50,25 @@
         <nav class="mx-2">
             <ul class="flex gap-3">
                 <li class="bg-primary">
-                    <a href="/" class="text-gray-200 hover:text-white duration-300 font-semibold">All Categories</a>   
+                    <router-link to="/" class="text-gray-200 hover:text-white duration-300 font-semibold">All Categories</router-link>   
                 </li>
                 <li>
-                    <a href="/" class="text-gray-200 hover:text-white duration-300 font-semibold">Home</a>   
+                    <router-link :to="{name: 'home'}" class="text-gray-200 hover:text-white duration-300 font-semibold">Home</router-link>   
                 </li>
                 <li>
-                    <a href="/" class="text-gray-200 hover:text-white duration-300 font-semibold">Shop</a>
+                    <a :to="{name: 'home'}" class="text-gray-200 hover:text-white duration-300 font-semibold">Shop</a>
                 </li>
                 <li>
-                    <a href="/" class="text-gray-200 hover:text-white duration-300 font-semibold">Products</a>
+                    <router-link :to="{name: 'products'}" class="text-gray-200 hover:text-white duration-300 font-semibold">Products</router-link>
                 </li>
                 <li>
-                    <a href="/" class="text-gray-200 hover:text-white duration-300 font-semibold">Blog</a>
+                    <a :to="{name: 'home'}" class="text-gray-200 hover:text-white duration-300 font-semibold">Blog</a>
                 </li>
                 <li>
-                    <a href="/" class="text-gray-200 hover:text-white duration-300 font-semibold">About Us</a>
+                    <a :to="{name: 'home'}" class="text-gray-200 hover:text-white duration-300 font-semibold">About Us</a>
                 </li>
                 <li>
-                    <a href="/" class="text-gray-200 hover:text-white duration-300 font-semibold">Contact Us</a>
+                    <a :to="{name: 'home'}" class="text-gray-200 hover:text-white duration-300 font-semibold">Contact Us</a>
                 </li>
             </ul>
         </nav>
