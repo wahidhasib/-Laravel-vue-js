@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import CategoryFilter from '@/Components/CategoryFilter.vue';
-import PopularProductComponent from '@/Components/PopularProductComponent.vue';
 import PricingFilter from '@/Components/PricingFilter.vue';
+import ProductComponent from '@/Components/ProductComponent.vue';
 import RatingComponent from '@/Components/RatingComponent.vue';
 import TagFilter from '@/Components/TagFilter.vue';
 
@@ -50,7 +50,7 @@ import TagFilter from '@/Components/TagFilter.vue';
                     <div class="flex items-center gap-3 text-sm">
                         <span class="text-gray-500 font-medium">Sort By:</span>
                         <select
-                            class="text-gray-700 border border-gray-300 bg-gray-50 rounded-lg py-2 px-3 outline-none">
+                            class="text-gray-700 border border-gray-300 bg-gray-50 rounded-lg py-1 px-2 outline-none">
                             <option value="">Latest</option>
                             <option value="">Price high - low</option>
                             <option value="">Price low - high</option>
@@ -65,8 +65,8 @@ import TagFilter from '@/Components/TagFilter.vue';
                 </div>
 
                 <!-- Products Grid -->
-                <div class="grid gap-5 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                    <PopularProductComponent v-for="i in 50" :key="i" />
+                <div class="grid gap-5 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+                    <ProductComponent v-for="i in 20" :key="i" />
                 </div>
             </div>
 
