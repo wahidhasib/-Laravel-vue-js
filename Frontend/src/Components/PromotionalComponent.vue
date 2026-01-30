@@ -49,11 +49,11 @@
             </div>
 
             <!-- Right Image -->
-            <div class="relative h-full">
+            <div class="relative h-full flex justify-center">
                 <img 
                     src="../../public/Images/model.png" 
                     alt="Model"
-                    class="max-w-xs lg:max-w-sm absolute bottom-0 right-0"
+                    class="max-w-xs lg:max-w-sm lg:absolute bottom-0 right-0"
                 >
             </div>
 

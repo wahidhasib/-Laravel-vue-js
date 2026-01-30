@@ -1,6 +1,5 @@
 <script setup>
 import CarouselComponent from '@/Components/CarouselComponent.vue';
-import PopularProductComponent from '@/Components/PopularProductComponent.vue';
 import TopCategory from '@/Components/TopCategory.vue';
 
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
@@ -11,6 +10,7 @@ import BlogComponent from '@/Components/BlogComponent.vue';
 import CategoryComponent from '@/Components/CategoryComponent.vue';
 import FeatureComponent from '@/Components/FeatureComponent.vue';
 import NewsletterComponent from '@/Components/NewsletterComponent.vue';
+import ProductComponent from '@/Components/ProductComponent.vue';
 import PromotionalComponent from '@/Components/PromotionalComponent.vue';
 import TestimonialCard from '@/Components/TestimonialCard.vue';
 import WideProductComponent from '@/Components/WideProductComponent.vue';
@@ -97,19 +97,12 @@ const onCategorySwiperInit = (swiper) => {
 
     <!-- Popular products section -->
     <section class="max-w-7xl mx-auto px-4 my-5">
-        <h2 class="font-semibold text-2xl md:text-3xl">Popular Products</h2>
-        <div class="grid gap-3 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 mt-3">
-            <PopularProductComponent></PopularProductComponent>
-            <PopularProductComponent></PopularProductComponent>
-            <PopularProductComponent></PopularProductComponent>
-            <PopularProductComponent></PopularProductComponent>
-            <PopularProductComponent></PopularProductComponent>
-            <PopularProductComponent></PopularProductComponent>
-            <PopularProductComponent></PopularProductComponent>
-            <PopularProductComponent></PopularProductComponent>
-            <PopularProductComponent></PopularProductComponent>
-            <PopularProductComponent></PopularProductComponent>
-            <PopularProductComponent></PopularProductComponent>
+        <div class="flex gap-3 items-center justify-between">
+            <h2 class="font-semibold text-2xl md:text-3xl">Popular Products</h2>
+            <router-link :to="{name: 'products'}" class="text-primary font-normal text-sm">View All</router-link>
+        </div>
+        <div class="grid gap-3 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 mt-3">
+            <ProductComponent v-for="i in 10" :key="i"></ProductComponent>
         </div>
     </section>
 
@@ -157,7 +150,7 @@ const onCategorySwiperInit = (swiper) => {
         </div>
     </section>
 
-    <section class="max-w-7xl grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-auto px-4 my-5">
+    <section class="max-w-7xl grid gap-4 grid-cols-2 lg:grid-cols-4 mx-auto px-4 my-5">
         <div class="">
             <h3 class="text-lg font-semibold mb-3 ms-2">Top Selling</h3>
             <WideProductComponent v-for="i in 3" :key="i"></WideProductComponent>

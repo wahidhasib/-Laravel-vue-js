@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import CategoryFilter from '@/Components/CategoryFilter.vue';
+import PaginationComponent from '@/Components/PaginationComponent.vue';
 import PricingFilter from '@/Components/PricingFilter.vue';
 import ProductComponent from '@/Components/ProductComponent.vue';
 import RatingComponent from '@/Components/RatingComponent.vue';
@@ -12,7 +13,7 @@ import TagFilter from '@/Components/TagFilter.vue';
         <div class="md:flex gap-6">
 
             <!-- Sidebar -->
-            <div class="w-full md:w-1/4">
+            <div class="hidden lg:block md:w-1/4">
                 <div class="bg-white rounded-lg shadow-md p-4 sticky top-2">
                     <form class="space-y-6">
 
@@ -41,10 +42,10 @@ import TagFilter from '@/Components/TagFilter.vue';
 
 
             <!-- Products Main -->
-            <div class="w-full md:w-3/4 bg-white p-5 rounded-lg shadow-md">
+            <div class="w-full lg:w-3/4 bg-white sm:p-5 rounded-lg shadow-md">
 
                 <!-- Heading & Sort -->
-                <div class="flex flex-col md:flex-row gap-4 md:items-center justify-between mb-6">
+                <div class="flex gap-4 md:items-center justify-between mb-6">
 
                     <!-- Sort By -->
                     <div class="flex items-center gap-3 text-sm">
@@ -65,12 +66,13 @@ import TagFilter from '@/Components/TagFilter.vue';
                 </div>
 
                 <!-- Products Grid -->
-                <div class="grid gap-5 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+                <div class="grid gap-3 md:gap-5 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
                     <ProductComponent v-for="i in 20" :key="i" />
                 </div>
+
+                <!-- Pagination -->
+                <PaginationComponent class="mt-5"></PaginationComponent>
             </div>
-
-
         </div>
     </section>
 </template>
