@@ -2,14 +2,17 @@
     <section class="bg-white py-5">
         <div class="md:flex gap-5 items-start justify-between max-w-7xl px-4 mx-auto">
             <div class="md:w-1/2">
-                <img src="../../public/Images/pro.jpg" class=" w-full" alt="">
+                <ProductSlider></ProductSlider>
             </div>
             <!-- product details -->
             <div class="md:w-1/2">
-                <h1 class="text-gray-900 font-semibold text-3xl">Chinese Cabbage</h1>
-                <div class="flex gap-3 items-center">
+                <h1 class="text-gray-700 font-semibold text-2xl lg:text-3xl mb-5">
+                    Chinese Cabbage 
+                    <span class="bg-green-100 rounded-md text-green-600 px-3 py-1 font-normal text-xs">In Stock</span>
+                </h1>
+                <div class="flex gap-3 items-center text-sm mb-3">
                     <div class="flex gap-1 items-center">
-                        <div class="ratings">
+                        <div class="text-yellow-500">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -23,7 +26,7 @@
                 </div>
 
                 <div class="flex gap-3 items-center">
-                    <h4 class="text-lg font-medium text-primary">$17.28</h4>
+                    <h4 class="text-lg lg:text-2xl text-primary font-semibold">$17.28</h4>
                     <span class="bg-red-50 px-3 py-1 text-xs rounded-sm font-medium text-red-700">64% Off</span>
                 </div>
 
@@ -47,7 +50,7 @@
                     </div>
                 </div>
 
-                <p class="text-gray-400 text-sm">
+                <p class="text-gray-600 text-sm font-light">
                     Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla
                     nibh diam, blandit vel consequat nec, ultrices et ipsum. Nulla varius magna a consequat pulvinar.
                 </p>
@@ -87,11 +90,59 @@
         </div>
 
         <!-- Description Additional information & Customer feedbacks -->
+        <div class="border-b-2 border-b-gray-200 mt-10">
+            <div class="flex items-center justify-center max-w-7xl mx-auto">
+                <button class="text-lg text-gray-400 py-1 px-3 border-b-2 border-transparent hover:border-primary duration-300 cursor-pointer hover:text-gray-800 font-semibold">Description</button>
+                <button class="text-lg text-gray-400 py-1 px-3 border-b-2 border-transparent hover:border-primary duration-300 cursor-pointer hover:text-gray-800 font-semibold">Additional Information</button>
+                <button class="text-lg text-gray-800 py-1 px-3 border-b-2 border-primary hover:border-primary duration-300 cursor-pointer hover:text-gray-800 font-semibold">Customer Feedback</button>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 mt-5 bg-white" id="custom-content">
+            <!-- Description -->
+             
+
+            <!-- Additional information -->
+
+
+
+            <!-- Customer Feedback -->
+            <div class="flex gap-5">
+                <div class="w-1/2">
+                    <div class="flex gap-5 items-center justify-between px-2">
+                        <div class="flex gap-3 items-center">
+                            <img src="../../public/Images/user.png" class="w-12 h-12 rounded-full" alt="">
+                            <div class="space-y-1">
+                                <h5 class="text-gray-800">Kristin Watson</h5>
+                                <ul class="flex items-center text-xs">
+                                    <li>
+                                        <i class="fa-solid fa-star"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-star"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-star"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-star"></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-star"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </section>
 </template>
 
 <script setup>
+import ProductSlider from '@/Components/ProductSlider.vue';
 import { ref } from 'vue';
 
 const quantity = ref(1);
