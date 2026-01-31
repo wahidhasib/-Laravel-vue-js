@@ -1,5 +1,5 @@
 <template>
-    <div class="relative w-full max-w-xs overflow-hidden rounded-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-primary bg-white shadow-md">
+    <div class="relative w-full max-w-xs overflow-hidden rounded-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-primary bg-white group shadow-md">
         <router-link :to="{name: 'productDetails', params: {id: 10}}">
             <img class="h-60 rounded-t-lg object-cover"
                 src="../../public/Images/green-apple.png"
@@ -9,7 +9,7 @@
             class="absolute top-0 left-0 w-28 translate-y-4 -translate-x-6 -rotate-45 bg-black text-center text-sm text-white">Sale</span>
         <div class="mt-4 px-3 pb-5">
             <router-link :to="{name: 'productDetails', params: {id: 10}}">
-                <h5 class="text-sm font-semibold tracking-tight text-slate-900">Nike Air MX Super 5000</h5>
+                <h2 class="text-md font-semibold tracking-tight text-slate-800 group-hover:text-black">Nike Air MX Super 5000</h2>
             </router-link>
             <div class="mt-2.5 mb-5 flex text-yellow-500 items-center">
                 <span class="mr-2 rounded bg-yellow-200 text-gray-700 px-2.5 py-0.5 text-xs font-semibold">5.0</span>

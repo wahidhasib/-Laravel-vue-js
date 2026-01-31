@@ -62,13 +62,13 @@
                     <router-link :to="{name: 'products'}" class="text-gray-200 hover:text-white duration-300 font-semibold">Products</router-link>
                 </li>
                 <li>
-                    <a :to="{name: 'home'}" class="text-gray-200 hover:text-white duration-300 font-semibold">Blog</a>
+                    <router-link :to="{name: 'blogs'}" class="text-gray-200 hover:text-white duration-300 font-semibold">Blog</router-link>
                 </li>
                 <li>
-                    <a :to="{name: 'home'}" class="text-gray-200 hover:text-white duration-300 font-semibold">About Us</a>
+                    <router-link :to="{name: 'about'}" class="text-gray-200 hover:text-white duration-300 font-semibold">About Us</router-link>
                 </li>
                 <li>
-                    <a :to="{name: 'home'}" class="text-gray-200 hover:text-white duration-300 font-semibold">Contact Us</a>
+                    <router-link :to="{name: 'contact'}" class="text-gray-200 hover:text-white duration-300 font-semibold">Contact Us</router-link>
                 </li>
             </ul>
         </nav>
