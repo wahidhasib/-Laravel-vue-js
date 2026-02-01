@@ -2,6 +2,7 @@ import AboutView from "@/Pages/AboutView.vue";
 import BlogDetails from "@/Pages/BlogDetails.vue";
 import BlogView from "@/Pages/BlogView.vue";
 import CartView from "@/Pages/CartView.vue";
+import CheckoutView from "@/Pages/CheckoutView.vue";
 import ContactView from "@/Pages/ContactView.vue";
 import HomeView from "@/Pages/HomeView.vue";
 import ProductDetails from "@/Pages/ProductDetails.vue";
@@ -20,6 +21,7 @@ const router = createRouter({
         { path: '/blogs', component: BlogView, name: 'blogs' },
         { path: '/blogs/:id', component: BlogDetails, name: 'blogDetails' },
         { path: '/cart', component: CartView, name: 'cart' },
+        { path: '/checkout', component: CheckoutView, name: 'checkout' },
     ]
 });
 
