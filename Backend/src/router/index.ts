@@ -1,3 +1,4 @@
+import Ecommerce from '@/views/Ecommerce.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
@@ -8,11 +9,19 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'Ecommerce',
-      component: () => import('../views/Ecommerce.vue'),
+      name: 'Login',
+      component: () => import('../../src/views/Auth/Signin.vue'),
       meta: {
-        title: 'eCommerce Dashboard',
+        title: 'Login',
       },
+    },
+    {
+      path: '/dashboard',
+      name: 'Dashboard',
+      component: Ecommerce,
+      meta: {
+        title: 'Dashboard'
+      }
     },
     {
       path: '/calendar',
